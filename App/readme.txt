@@ -1,0 +1,2 @@
+Additional installations required:
+- ffmpeg
