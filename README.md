@@ -2,7 +2,7 @@
 
 This repository contains code, notebooks and a GUI application for exploring and experimenting with various deep learning architectures to generate piano music. The experiments include recurrent architectures (GRU, LSTM), encoder-decoder models, transformer-based fine-tuning (DistilGPT-2), and GAN-based approaches.
 
-# **Table of Contents**
+##h **Table of Contents**
 
 ## TODO
 
@@ -36,18 +36,18 @@ Each approach is implemented in a separate Jupyter notebook, showing all of the 
 
 ### **GRU and LSTM**
 
-#### **Many-to-One**
+##### **Many-to-One**
 
   - **Input**: Sequence of length *seq_len* with 128-dimensional piano-roll vectors
   - **Architecture**: 2 layers of GRU/LSTM with a hidden size of 256
   - **Output**: Single 128-dimensional vector predicting the next timestep
 
-#### **Many-to-Many**
+##### **Many-to-Many**
   - **Input/Output**: Seqeunces of length *seq_len*
   - **Architecture**: Same as many-to-one, but returns outputs at every timestep
   - **Note**: Did not converge; experiments discontinued
 
-#### **Encoder-Decoder**
+##### **Encoder-Decoder**
   - **Encoder**: 2 layers of bidirectional LSTM with a hidden size of 1024, input dimension - 128
   - **Decoder**: LSTM + linear projection to 128 dimensions with teacher forcing
   - **Workflow**: Encode full sequence, then decode iteratively to generate music
@@ -61,3 +61,36 @@ Each approach is implemented in a separate Jupyter notebook, showing all of the 
   - **Generator**: 100-dimensional input -> 2 LSTM layers with a hidden size of 350 -> linear layer to 4-dimensional representation
   - **Discriminator**: 2 bidirectional LSTM layers with a hidden size of 350 -> linear output
   - **Status**: Training script implemented, but unresolved errors prevented training
+
+## **Results**
+
+### **Objective Measures**
+
+Measured against test set on:
+  - **Pitch diversity**
+  - **Rhythmic consistency**
+  - **Note density**
+
+The *DistilGPT-2* model achieved the highest overall scores. The Many-to-One GRU/LSTM models performed competitively on rhythmic entropy and note density, respectively.
+
+### **Subjective Evaluation**
+
+Listening tests revealed, that the *DistilGPT-2* model produced the most coherent samples, while the RNN-based models exhibited random pauses and noise bursts. Every user can evaluate the models for themselves by using the GUI application, containing the models.
+
+## **Future Work**
+Here are some of the ideas to work on in the future:
+  - Integrate *attention mechanisms* into the encoder-decoder framework
+  - Resolve and extend *GAN* training
+  - Explore *larger transformer* variants
+
+## **6. References**
+1. Curtis Hawthorne, Andriy Stasyuk, Adam Roberts, Ian Simon, Cheng-Zhi Anna Huang,
+  Sander Dieleman, Erich Elsen, Jesse Engel, and Douglas Eck. *"Enabling
+  Factorized Piano Music Modeling and Generation with the MAESTRO Dataset."*
+  In International Conference on Learning Representations, 2019.
+
+2. Olof Morgen. *"C-RNN-GAN: Continuous recurrent neural networks with adversarial training"*
+
+3. Yu-Siang Huang, Yi-Hsuan Yang. *"Pop Music Transformer: Beat-based Modeling and Generation of Expressive Pop Piano Compositions"*
+
+4. Sanh, Victor and Debut, Lysandre and Chaumond, Julien and Wolf, Thomas. *"DistilBERT, a distilled version of BERT: smaller, faster, cheaper and lighter"*
