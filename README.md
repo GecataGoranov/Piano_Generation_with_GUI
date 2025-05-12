@@ -2,7 +2,7 @@
 
 This repository contains code, notebooks and a GUI application for exploring and experimenting with various deep learning architectures to generate piano music. The experiments include recurrent architectures (GRU, LSTM), encoder-decoder models, transformer-based fine-tuning (DistilGPT-2), and GAN-based approaches.
 
-##h **Table of Contents**
+## **Table of Contents**
 
 ## TODO
 
@@ -31,6 +31,14 @@ Each approach is implemented in a separate Jupyter notebook, showing all of the 
 ## **Usage**
 
 ### TODO
+
+## **Data Representation**
+
+This project uses the MAESTRO dataset. For the various experiments, different data representation forms were used:
+  - **Piano-roll representation**
+  - **Word tokenization**
+  - **Quadruplet representation**
+  - # **TODO**
 
 ## **Model Architectures**
 
