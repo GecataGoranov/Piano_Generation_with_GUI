@@ -7,6 +7,10 @@ This repository contains code, notebooks and a GUI application for exploring and
 2. [Features](#features)
 3. [Installation](#installation)
 4. [Usage](#usage)
+5. [Data Representation](#data-representation)
+6. [Model Architectures](#model-architectures)
+7. [Results](#results)
+8. [Future Work](#future-work)
 
 ## **Project Overview**
 
