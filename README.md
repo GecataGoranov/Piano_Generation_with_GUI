@@ -32,23 +32,26 @@ If you wish to run the application, you would have to follow these steps:
      `git clone https://github.com/GecataGoranov/Piano_Generation_with_GUI.git
      cd Piano_Generation_with_GUI/App`
   2. **Install the necessary packages**
-     - On Debian/Ubuntu systems:
+     - On **Debian/Ubuntu** systems:
+       
        `sudo apt install git-lfs ffmpeg fluidsynth`
-     - On RedHat/Fedora systems:
+     - On **RedHat/Fedora** systems:
+       
         `sudo dnf install git-lfs ffmpeg fluidsynth`
-     - On Arch-based systems:
+     - On **Arch** systems:
+       
        `sudo pacman -S git-lfs ffmpeg fluidsynth`
-     - On Windows:
-       Using Chocolatey (recommended)
+     - On **Windows**:
+       - Using Chocolatey (recommended)
           `choco install git-lfs ffmpeg fluidsynth -y`
-       Using Winget
+       - Using Winget
           `winget install --id=FFmpeg.FFmpeg
            winget install --id=Fluidsynth.Fluidsynth
            winget install --id=Github.GitLFS`
-      - On MacOS
-        Using Homebrew (recommended)
+      - On **MacOS**
+        - Using Homebrew (recommended)
           `brew install git-lfs ffmpeg fluidsynth`
-        Using MacPorts
+        - Using MacPorts
           `sudo port -y install git-lfs ffmpeg fluidsynth`
   4. **Download the large files**
      `git lfs install
