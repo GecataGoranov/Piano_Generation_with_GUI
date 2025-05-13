@@ -26,11 +26,43 @@ Each approach is implemented in a separate Jupyter notebook, showing all of the 
 
 ## **Installation**
 
-### TODO
+If you wish to run the application, you would have to follow these steps:
+
+  1. **Clone the repository and navigate to the "App/" directory**
+     `git clone https://github.com/GecataGoranov/Piano_Generation_with_GUI.git
+     cd Piano_Generation_with_GUI/App`
+  2. **Install the necessary packages**
+     - On Debian/Ubuntu systems:
+       `sudo apt install git-lfs ffmpeg fluidsynth`
+     - On RedHat/Fedora systems:
+        `sudo dnf install git-lfs ffmpeg fluidsynth`
+     - On Arch-based systems:
+       `sudo pacman -S git-lfs ffmpeg fluidsynth`
+     - On Windows:
+       Using Chocolatey (recommended)
+          `choco install git-lfs ffmpeg fluidsynth -y`
+       Using Winget
+          `winget install --id=FFmpeg.FFmpeg
+           winget install --id=Fluidsynth.Fluidsynth
+           winget install --id=Github.GitLFS`
+      - On MacOS
+        Using Homebrew (recommended)
+          `brew install git-lfs ffmpeg fluidsynth`
+        Using MacPorts
+          `sudo port -y install git-lfs ffmpeg fluidsynth`
+  4. **Download the large files**
+     `git lfs install
+     git lfs pull`
+  6. **Create and activate a Python environment**
+     `python3 -m venv .venv
+     source venv/bin/activate`
+  7. **Install Python dependencies**
+     `pip install -r requirements.txt`
 
 ## **Usage**
 
-### TODO
+In order to use the application, after completing the installation process, you just have to execute the following command in the "App/" directory:
+`streamlit run main.py`
 
 ## **Data Representation**
 
