@@ -3,7 +3,7 @@
 This repository contains code, notebooks and a GUI application for exploring and experimenting with various deep learning architectures to generate piano music. The experiments include recurrent architectures (GRU, LSTM), encoder-decoder models, transformer-based fine-tuning (DistilGPT-2), and GAN-based approaches.
 
 ## **Table of Contents**
-
+1. [Project Overview](#project-overview)  
 ## TODO
 
 ## **Project Overview**
@@ -92,10 +92,9 @@ streamlit run main.py
 ## **Data Representation**
 
 This project uses the MAESTRO dataset. For the various experiments, different data representation forms were used:
-  - **Piano-roll representation**
-  - **Word tokenization**
-  - **Quadruplet representation**
-  - # **TODO**
+  - **Piano-roll representation** - The MIDI files were partitioned into timesteps, with each timestep containing a 128-dimensional vector, representing every possible pitch
+  - **Word tokenization** - The MIDI files were converted into string tokens, using the `miditok` library with the REMI tokenizer
+  - **Quadruplet representation** - The MIDI files were split into 4 continuous values per note: *tone length, frequency, intensity* and *time spent since the previous tone*.
 
 ## **Model Architectures**
 
@@ -148,7 +147,7 @@ Here are some of the ideas to work on in the future:
   - Resolve and extend *GAN* training
   - Explore *larger transformer* variants
 
-## **6. References**
+## **References**
 1. Curtis Hawthorne, Andriy Stasyuk, Adam Roberts, Ian Simon, Cheng-Zhi Anna Huang,
   Sander Dieleman, Erich Elsen, Jesse Engel, and Douglas Eck. *"Enabling
   Factorized Piano Music Modeling and Generation with the MAESTRO Dataset."*
