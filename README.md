@@ -74,7 +74,7 @@ If you wish to run the application, you would have to follow these steps:
      
      ```
      python3 -m venv .venv
-     source venv/bin/activate
+     source .venv/bin/activate
      ```
   8. **Install Python dependencies**
      
