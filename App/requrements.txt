@@ -1,0 +1,8 @@
+streamlit
+torch
+tqdm
+pretty_midi
+midi2audio
+muspy
+transformers
+miditok
