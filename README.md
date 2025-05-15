@@ -4,7 +4,7 @@ This repository contains code, notebooks and a GUI application for exploring and
 
 ## **Demo**
 
-[Here is a quick demo of the DistilGPT-2 model](demo/gpt2_generated_song.mp3?raw=true)
+[Here is a quick demo of the DistilGPT-2 model](https://raw.githubusercontent.com/GecataGoranov/Piano_Generation_with_GUI/main/demo/gpt2_generated_song.mp3)
 
 ## **Table of Contents**
 1. [Project Overview](#project-overview)  
