@@ -3,6 +3,7 @@ import pandas as pd
 import torch
 import random
 
+from pathlib import Path
 from tqdm import tqdm
 from utils.conversions import midi_to_wav, pianoroll_to_midi
 from utils.many_to_one import MusicDatasetManyToOne, ManyToOneGRU, ManyToOneLSTM, generate_music_many_to_one
@@ -113,6 +114,18 @@ def get_music_gpt2(generated_ids, tokenizer):
     wav = midi_to_wav("temp/temp_midi.mid", volume=15.0)
     return wav
 
+def show_download_button():
+    st.text("Like what you heard? Download it from here:")
+    file_path = Path("temp/temp_wav.wav")
+
+    with file_path.open("rb") as f:
+        st.download_button(
+            label="Download WAV",
+            data=f,
+            file_name="tone.wav",
+            mime="audio/wav"
+        )
+
 
 def main():
     st.set_page_config(
@@ -145,6 +158,7 @@ def main():
                 get_music_many_to_one(model)
             st.success("Done!")
             st.audio("temp/temp_wav.wav")
+            show_download_button()
 
 
         if st.button("Many-to-One LSTM"):
@@ -153,6 +167,7 @@ def main():
                 get_music_many_to_one(model)
             st.success("Done!")
             st.audio("temp/temp_wav.wav")
+            show_download_button()
 
     with col2:
         st.subheader("Sequence-to-Sequence & GPT-2")
@@ -163,6 +178,7 @@ def main():
                 get_music_encoder_decoder(model)
             st.success("Done!")
             st.audio("temp/temp_wav.wav")
+            show_download_button()
 
         if st.button("DistilGPT-2"):
             with st.spinner("Generating..."):
@@ -172,6 +188,7 @@ def main():
                 get_music_gpt2(generated_ids, tokenizer)
             st.success("Done!")
             st.audio("temp/temp_wav.wav")
+            show_download_button()
 
 
 if __name__ == "__main__":
