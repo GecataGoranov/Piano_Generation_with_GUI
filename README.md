@@ -2,6 +2,10 @@
 
 This repository contains code, notebooks and a GUI application for exploring and experimenting with various deep learning architectures to generate piano music. The experiments include recurrent architectures (GRU, LSTM), encoder-decoder models, transformer-based fine-tuning (DistilGPT-2), and GAN-based approaches.
 
+## **Demo**
+
+[Here](https://raw.githubusercontent.com/GecataGoranov/Piano_Generation_with_GUI/main/demo/gpt2_generated_song.mp3) is a sample of the DistilGPT-2 model
+
 ## **Table of Contents**
 1. [Project Overview](#project-overview)  
 2. [Features](#features)
