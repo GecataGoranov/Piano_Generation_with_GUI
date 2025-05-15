@@ -35,8 +35,10 @@ Each approach is implemented in a separate Jupyter notebook, showing all of the 
 If you wish to run the application, you would have to follow these steps:
 
   1. **Clone the repository and navigate to the "App/" directory**
-     ```git clone https://github.com/GecataGoranov/Piano_Generation_with_GUI.git
-     cd Piano_Generation_with_GUI/App```
+     ```
+     git clone https://github.com/GecataGoranov/Piano_Generation_with_GUI.git
+     cd Piano_Generation_with_GUI/App
+     ```
   3. **Install the necessary packages**
      - On **Debian/Ubuntu** systems:
        ```
